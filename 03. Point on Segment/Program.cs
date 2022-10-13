@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _03._Point_on_Segment
 {
@@ -9,26 +9,26 @@ namespace _03._Point_on_Segment
 
 
 
-            var tochka1 = int.Parse(Console.ReadLine());
-            var tochka2 = int.Parse(Console.ReadLine());
-            var tochka3 = int.Parse(Console.ReadLine());
+            var point1 = int.Parse(Console.ReadLine());
+            var point2 = int.Parse(Console.ReadLine());
+            var point3 = int.Parse(Console.ReadLine());
 
 
             var measure = 0;
-            if (Math.Abs(tochka3 - tochka1) <= Math.Abs(tochka3 - tochka2))
+            if (Math.Abs(point3 - point1) <= Math.Abs(point3 - point2))
             {
-                measure = Math.Abs(tochka3 - tochka1);
+                measure = Math.Abs(point3 - point1);
             }
-            else {measure = Math.Abs(tochka3 - tochka2); }
-            if (tochka1 > tochka2)
+            else {measure = Math.Abs(point3 - point2); }
+            if (point1 > point2)
             {
-                var oldTochka2 = tochka2;
-                tochka2 = tochka1;
-                tochka1 = oldTochka2;
+                var oldPoint2 = point2;
+                point2 = point1;
+                point1 = oldPoint2;
             }
-            for (int i = tochka1; i <= tochka2; i++)
+            for (int i = point1; i <= point2; i++)
             {
-                if (i == tochka3)
+                if (i == point3)
                 {
                     Console.WriteLine("in");
                     Console.WriteLine(measure);
@@ -39,38 +39,7 @@ namespace _03._Point_on_Segment
             Console.WriteLine(measure);
 
 
-
-
-
-
-
-
-
-            //if(tochka1 > tochka2)
-            //{
-            //    var oldTochka2 = tochka2;
-            //    tochka2 = tochka1;
-            //    tochka1 = oldTochka2;
-            //}
-            //if(tochka3 >= tochka1 && tochka3 <= tochka2)
-            //{
-            //    Console.WriteLine("in");
-            //    if(Math.Abs(tochka3 - tochka1) <= Math.Abs(tochka3 - tochka2))
-            //    {
-            //        Console.WriteLine(Math.Abs(tochka3 - tochka1));
-            //    }
-            //    else { Console.WriteLine(Math.Abs(tochka3 - tochka2)); }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("out");
-            //    if (Math.Abs(tochka3 - tochka1) <= Math.Abs(tochka3 - tochka2))
-            //    {
-            //        Console.WriteLine(Math.Abs(tochka3 - tochka1));
-            //    }
-            //    else { Console.WriteLine(Math.Abs(tochka3 - tochka2)); }
-            //}
-
+          
         }
     }
 }
